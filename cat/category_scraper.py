@@ -70,8 +70,8 @@ def save_chunk_to_disk(saver_queue, event):
     while True:
             try:
                 index, df = saver_queue.get(block=True, timeout=1) 
-                df.to_csv(logdir + '/' + 'category_data_frame_{0}.csv'.format(index+1371))    
-                print('saved file: category_data_frame_{0}.csv'.format(index+1371))
+                df.to_csv(logdir + '/' + 'category_data_frame_{0}.csv'.format(index))    
+                print('saved file: category_data_frame_{0}.csv'.format(index))
             except:
                 pass
             if event.is_set(): break
