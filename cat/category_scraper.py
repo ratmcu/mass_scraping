@@ -107,7 +107,7 @@ def dispatch_jobs(data, worker_number):
     queue_number = 0
     
     for i, s in enumerate(slice):
-        print(i)
+#         print(i)
         in_queue.put((i, s))
         #in_queues[queue_number].put((i, s))
         #queue_number += queue_number
@@ -135,7 +135,7 @@ def dispatch_jobs(data, worker_number):
 data = links_js
 start_time = time.perf_counter()
 print(os.cpu_count())
-cpu_count = 4
+cpu_count = os.cpu_count()
 category_data_frame = dispatch_jobs(data, cpu_count)
 end_time = time.perf_counter()      # 2
 run_time = end_time - start_time 
