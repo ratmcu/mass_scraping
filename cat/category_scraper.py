@@ -132,7 +132,7 @@ def dispatch_jobs(data, worker_number):
     disk_save_mp.join()  
     return
 
-data = links_js[137100:]
+data = links_js
 start_time = time.perf_counter()
 print(os.cpu_count())
 cpu_count = 4
